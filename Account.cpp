@@ -50,9 +50,13 @@ void Account::displayAcc()
 {
     if (checkLogin(this->password))
     {
+        cout << "==============================" << endl;
+        cout << "ACCOUNT [" << accNo << "]" << endl;
+        cout << "==============================" << endl;
         cout << "Name: " << name << endl;
         cout << "Account No. " << accNo << endl;
         cout << "Balance: " << balance << endl;
+        cout << "==============================" << endl;
     }
     else
     {
@@ -119,4 +123,32 @@ void Account::showBalance()
 double Account::getBalance() const
 {
     return balance;
+}
+
+string Account::getAccNo() const
+{
+    return this->accNo;
+}
+
+Account *Account::searchAccount(const std::string &accNo, std::vector<Account> &accounts)
+{
+    for (auto &account : accounts)
+    {
+        if (accNo == account.getAccNo())
+        {
+            return &account;
+        }
+    }
+    return nullptr;
+}
+
+void Account::getAllAccounts()
+{
+    cout << "==============================" << endl;
+    cout << "ACCOUNT [" << accNo << "]" << endl;
+    cout << "==============================" << endl;
+    cout << "Name: " << name << endl;
+    cout << "Account No. " << accNo << endl;
+    cout << "Balance: " << balance << endl;
+    cout << "==============================" << endl;
 }
