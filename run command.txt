@@ -1,0 +1,6 @@
+Step 1: g++ main.cpp Account.cpp -o bank_program
+Step 2:
+    if you're using linux then
+        ./bank_program
+    if you're using windows then
+        bank_program.exe

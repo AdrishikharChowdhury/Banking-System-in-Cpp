@@ -41,3 +41,4 @@
 *.dwo
 output/
 .vscode/
+bank_program
